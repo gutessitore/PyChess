@@ -1,0 +1,145 @@
+{
+  "pawn": {
+    "value": 1,
+    "canPromote": true,
+    "movement": {
+      "possibilities": [
+        {"rank": 0, "file": 1}
+      ],
+      "doubleOnFirstMove": true,
+      "canMoveBackwards": false,
+      "canJump": false,
+      "canRook": false,
+      "ranged": false
+    },
+    "capture":{
+      "possibilities": [
+        {"rank": 1, "file": 1},
+        {"rank": -1, "file": 1}
+      ]
+    }
+  },
+  "bishop": {
+    "value": 3,
+    "canPromote": false,
+    "movement": {
+      "possibilities": [
+        {"rank": 1, "file": 1},
+        {"rank": -1, "file": 1}
+      ],
+      "doubleOnFirstMove": false,
+      "canMoveBackwards": true,
+      "canJump": false,
+      "canRook": false,
+      "ranged": true
+    },
+    "capture":{
+      "possibilities": [
+        {"rank": 1, "file": 1},
+        {"rank": -1, "file": 1}
+      ]
+    }
+  },
+  "knight": {
+    "value": 3,
+    "canPromote": false,
+    "movement": {
+      "possibilities": [
+        {"rank": 2, "file": 1},
+        {"rank": 1, "file": 2},
+        {"rank": -2, "file": 1},
+        {"rank": -1, "file": 2}
+      ],
+      "doubleOnFirstMove": false,
+      "canMoveBackwards": true,
+      "canJump": true,
+      "canRook": false,
+      "ranged": false
+    },
+    "capture":{
+      "possibilities": [
+        {"rank": 2, "file": 1},
+        {"rank": 1, "file": 2},
+        {"rank": -2, "file": 1},
+        {"rank": -1, "file": 2}
+      ]
+    }
+  },
+  "rook": {
+    "value": 5,
+    "canPromote": false,
+    "movement": {
+      "possibilities": [
+        {"rank": 0, "file": 1},
+        {"rank": 1, "file": 0},
+        {"rank": -1, "file": 0}
+      ],
+      "doubleOnFirstMove": false,
+      "canMoveBackwards": true,
+      "canJump": false,
+      "canRook": true,
+      "ranged": true
+    },
+    "capture":{
+      "possibilities": [
+        {"rank": 0, "file": 1},
+        {"rank": 1, "file": 0},
+        {"rank": -1, "file": 0}
+      ]
+    }
+  },
+  "queen": {
+    "value": 9,
+    "canPromote": false,
+    "movement": {
+      "possibilities": [
+        {"rank": 0, "file": 1},
+        {"rank": 1, "file": 0},
+        {"rank": -1, "file": 0},
+        {"rank": 1, "file": 1},
+        {"rank": 1, "file": 1}
+      ],
+      "doubleOnFirstMove": false,
+      "canMoveBackwards": true,
+      "canJump": false,
+      "canRook": false,
+      "ranged": true
+    },
+    "capture":{
+      "possibilities": [
+        {"rank": 0, "file": 1},
+        {"rank": 1, "file": 0},
+        {"rank": -1, "file": 0},
+        {"rank": 1, "file": 1},
+        {"rank": 1, "file": 1}
+      ]
+    }
+  },
+  "king": {
+    "value": -1,
+    "canPromote": false,
+    "movement": {
+      "possibilities": [
+        {"rank": 0, "file": 1},
+        {"rank": 1, "file": 0},
+        {"rank": -1, "file": 0},
+        {"rank": 1, "file": 1},
+        {"rank": 1, "file": 1}
+      ],
+      "doubleOnFirstMove": false,
+      "canMoveBackwards": true,
+      "canJump": false,
+      "canRook": false,
+      "ranged": false
+    },
+    "capture":{
+      "possibilities": [
+        {"rank": 0, "file": 1},
+        {"rank": 1, "file": 0},
+        {"rank": -1, "file": 0},
+        {"rank": 1, "file": 1},
+        {"rank": 1, "file": 1}
+      ]
+    }
+  }
+}
