@@ -7,7 +7,7 @@ import json
 class Piece:
     name: str
     pos: tuple
-    color: str
+    color: int
 
     def __post_init__(self):
         file = open("/home/tessitore/PyChess/objects/piecesInfo.json")

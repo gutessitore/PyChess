@@ -1,2 +1,4 @@
 
 BOARD_SIZE = 8
+WHITE = 1
+BLACK = 0
