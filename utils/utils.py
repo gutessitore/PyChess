@@ -35,7 +35,7 @@ def fen_to_squares(fen: str, full_info: bool = False) -> list or dict:
     rows = piece_placement.split("/")
 
     squares = list()
-    current_file = 0
+    current_file = 7
     for row in rows:
         current_rank = 0
         for piece in row:
@@ -54,7 +54,7 @@ def fen_to_squares(fen: str, full_info: bool = False) -> list or dict:
                     square = dict(pos=pos, color=color, current_piece=piece_name)
                     squares.append(square)
                     current_rank += 1
-        current_file += 1
+        current_file -= 1
 
     if full_info:
         info_dict = {
@@ -95,10 +95,33 @@ def squares_to_fen(squares: [dict]) -> str:
     return fen[1:]
 
 
-def position_to_rect_cords(pos: tuple) -> list:
-    height_width = (SQUARE_PIXEL_SIZE, SQUARE_PIXEL_SIZE)
+def position_to_rect_cords(pos: tuple, size: tuple) -> list:
+    height_width = size
     x_y = multiply_vectors(pos, height_width)
+    x_y = [x_y[0], SCREEN_HEIGHT - x_y[1] - SQUARE_PIXEL_SIZE]
     return [*x_y, *height_width]
+
+
+def toggle_square_temp_color(square, color):
+    if square.temp_color is None:
+        square.temp_color = color
+    else:
+        square.temp_color = None
+
+
+def toggle_red_square(square):
+    toggle_square_temp_color(square, RED_SQUARE_COLOR)
+
+
+def toggle_red_gray(square):
+    toggle_square_temp_color(square, GRAY_SQUARE_COLOR)
+
+
+def toggle_piece_temp_size(piece):
+    if piece.temp_size is None:
+        piece.temp_size = 220
+    else:
+        piece.temp_size = None
 
 
 # Vector operations
@@ -116,6 +139,14 @@ def add_vectors(v1: tuple, v2: tuple) -> tuple:
 
 def multiply_vectors(v1: tuple, v2: tuple) -> tuple:
     return tuple(numpy.multiply(v1, v2))
+
+
+def resize_vector(v1: tuple, multiplier: int) -> tuple:
+    return tuple([component * multiplier for component in v1])
+
+
+def invert_vector(vector: tuple) -> tuple:
+    return multiply_vectors(vector, (-1, -1))
 
 
 def _convert_true_and_false_to_direction(condition: bool) -> int:

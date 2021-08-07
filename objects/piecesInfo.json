@@ -40,7 +40,7 @@
       ]
     }
   },
-  "k": {
+  "n": {
     "value": 3,
     "canPromote": false,
     "movement": {
@@ -97,7 +97,7 @@
         {"rank": 1, "file": 0},
         {"rank": -1, "file": 0},
         {"rank": 1, "file": 1},
-        {"rank": 1, "file": 1}
+        {"rank": -1, "file": -1}
       ],
       "doubleOnFirstMove": false,
       "canMoveBackwards": true,
@@ -111,7 +111,7 @@
         {"rank": 1, "file": 0},
         {"rank": -1, "file": 0},
         {"rank": 1, "file": 1},
-        {"rank": 1, "file": 1}
+        {"rank": -1, "file": -1}
       ]
     }
   },

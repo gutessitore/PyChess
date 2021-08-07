@@ -11,8 +11,16 @@ class Board:
         self.grid = base_grid
 
     @property
-    def occupied_squares(self) -> list:
+    def occupied_squares_pos(self) -> list:
         return [square.pos for square in self.grid if square.is_occupied]
+
+    @property
+    def occupied_squares(self) -> list:
+        return [square for square in self.grid if square.is_occupied]
+
+    @property
+    def squares(self) -> list:
+        return [square for square in self.grid]
 
     def move_piece(self, from_pos: tuple, to_pos: tuple) -> None:
         source_square = next(square for square in self.grid if square.pos == from_pos)
@@ -39,8 +47,8 @@ class Board:
         distance = calculate_position_distance(to_pos, from_pos)
 
         for multiplier in range(1, distance + 1):
-            pos_to_check = add_vectors(from_pos, simplified_movement_vector * multiplier)
-            if pos_to_check in self.occupied_squares:
+            pos_to_check = add_vectors(from_pos, resize_vector(simplified_movement_vector, multiplier))
+            if pos_to_check in self.occupied_squares_pos:
                 return False
 
         return True

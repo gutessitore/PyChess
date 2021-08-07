@@ -28,13 +28,13 @@ class Game:
 
     @property
     def display_on_console(self):
-        current_row = 0
+        current_row = 7
         board_string = "|"
         for square in self.board.grid:
-            if square.pos[1] > current_row:
+            if square.pos[1] < current_row:
                 board_string = board_string[:-1]
                 board_string += "\n|"
-                current_row += 1
+                current_row -= 1
             if square.current_piece is None:
                 board_string += " " + "|\t|"
             else:
@@ -45,19 +45,22 @@ class Game:
     def display_board(self, surface: pygame.Surface):
         for square in self.board.grid:
             self.display_square(surface, square)
-            self.display_piece(surface, square)
+            if square.is_occupied:
+                self.display_piece(surface, square)
 
-    def display_piece(self, surface: pygame.Surface, square: Square):
-        if square.current_piece is not None:
-            piece_image_name = IMAGE_MAP.get(square.current_piece.name)
-            image_path = "/home/tessitore/PyChess/images/Sprites/" + piece_image_name
-            image = pygame.image.load(image_path)
-            scaled_image = pygame.transform.scale(image, (SQUARE_PIXEL_SIZE, SQUARE_PIXEL_SIZE))
+    @staticmethod
+    def display_piece(surface: pygame.Surface, square: Square):
 
-            image_rect = pygame.Rect(*position_to_rect_cords(square.pos))
+        piece = square.current_piece
+        piece_image_name = IMAGE_MAP.get(piece.name)
+        image_path = "/home/tessitore/PyChess/images/Sprites/" + piece_image_name
+        image = pygame.image.load(image_path).convert_alpha()
+        scaled_image = pygame.transform.scale(image, piece.size)
 
-            surface.blit(scaled_image, image_rect)
+        image_rect = piece.rect
 
-    def display_square(self, surface: pygame.Surface, square: Square):
-        square_rect = pygame.Rect(*position_to_rect_cords(square.pos))
-        pygame.draw.rect(surface, square.get_rect_color, square_rect)
+        surface.blit(scaled_image, image_rect)
+
+    @staticmethod
+    def display_square(surface: pygame.Surface, square: Square):
+        pygame.draw.rect(surface, square.get_rect_color, square.rect)
