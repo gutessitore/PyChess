@@ -39,5 +39,8 @@ class Game:
             else:
                 board_string += str(square.current_piece) + "|\t|"
             pass
-        print(board_string[:-2])
+        return board_string[:-2]
+
+    @property
+    def display(self):
         return None
