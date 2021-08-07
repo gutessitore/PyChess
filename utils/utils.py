@@ -76,7 +76,7 @@ def squares_to_fen(squares: [dict]) -> str:
 
     empty_squares_on_row = 0
     for square in squares:
-        current_rank = square.get("pos")[1]
+        current_rank = square.get("pos")[0]
         if current_rank == 0:  # Start of each row
             if empty_squares_on_row != 0:
                 fen += str(empty_squares_on_row)
