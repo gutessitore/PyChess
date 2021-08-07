@@ -10,11 +10,13 @@ class Piece:
     pos: tuple
     color: int
     temp_size: int = None
+    can_jump: bool = None
 
     def __post_init__(self):
         file = open("/home/tessitore/PyChess/objects/piecesInfo.json")
         name = self.name.lower()
         self._piece_rules = json.load(file).get(name)
+        self.can_jump = self._piece_rules.get("movement").get("canJump")
 
     def __repr__(self):
         return str(self.name)
