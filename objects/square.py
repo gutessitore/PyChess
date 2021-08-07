@@ -12,7 +12,7 @@ class Square:
     def __post_init__(self):
         self.color = self._define_color()
         if isinstance(self.current_piece, str):
-            self.current_piece = Piece(self.current_piece, self.pos, 1)
+            self.current_piece = self.define_piece_object(self.current_piece, self.pos)
 
     def _define_color(self):
         rank = self.pos[0]
@@ -29,6 +29,11 @@ class Square:
             color = BLACK
 
         return color
+
+    @staticmethod
+    def define_piece_object(name, pos):
+        color = WHITE if name.islower() else BLACK
+        return Piece(name, pos, color)
 
     @property
     def is_occupied(self) -> bool:
