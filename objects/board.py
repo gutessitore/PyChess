@@ -1,4 +1,5 @@
 from objects.square import Square
+from utils.utils import *
 
 
 class Board:
@@ -9,9 +10,37 @@ class Board:
         base_grid = [Square((rank, file)) for rank in self.ranks for file in self.files]
         self.grid = base_grid
 
-    @staticmethod
-    def move_piece(current_square: Square, to_square: Square) -> None:
-        if not to_square.is_occupied:
-            to_square.current_piece = current_square.current_piece
-            current_square.current_piece = None
+    @property
+    def occupied_squares(self) -> list:
+        return [square.pos for square in self.grid if square.is_occupied]
 
+    def move_piece(self, from_pos: tuple, to_pos: tuple) -> None:
+        source_square = next(square for square in self.grid if square.pos == from_pos)
+        target_square = next(square for square in self.grid if square.pos == to_pos)
+
+        if not target_square.is_occupied:
+
+            if to_pos in source_square.current_piece.possible_moves:
+
+                if self.move_path_is_clear(from_pos, to_pos):
+                    target_square.current_piece = source_square.current_piece
+                    source_square.current_piece = None
+
+                else:
+                    raise ValueError(f"Piece can't move {source_square} to {target_square}, path blocked")
+            else:
+                raise ValueError(f"Piece can't move {source_square} to {target_square}, move not allowed")
+        else:
+            raise ValueError(f"Piece can't move {source_square} to {target_square}, square is occupied")
+
+    def move_path_is_clear(self, from_pos: tuple, to_pos: tuple) -> bool:
+        movement_vector = subtract_vectors(to_pos, from_pos)
+        simplified_movement_vector = simplify_vector(movement_vector)
+        distance = calculate_position_distance(to_pos, from_pos)
+
+        for multiplier in range(1, distance + 1):
+            pos_to_check = add_vectors(from_pos, simplified_movement_vector * multiplier)
+            if pos_to_check in self.occupied_squares:
+                return False
+
+        return True

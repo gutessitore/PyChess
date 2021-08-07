@@ -2,3 +2,4 @@
 BOARD_SIZE = 8
 WHITE = 1
 BLACK = 0
+INITIAL_FEN = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"

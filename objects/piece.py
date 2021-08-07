@@ -11,10 +11,14 @@ class Piece:
 
     def __post_init__(self):
         file = open("/home/tessitore/PyChess/objects/piecesInfo.json")
-        self._piece_rules = json.load(file).get(self.name)
+        name = self.name.lower()
+        self._piece_rules = json.load(file).get(name)
+
+    def __repr__(self):
+        return str(self.name)
 
     @property
-    def _possible_moves(self) -> list:
+    def possible_moves(self) -> list:
 
         # get piece attributes
         movement_rules = self._piece_rules.get("movement")
@@ -33,6 +37,8 @@ class Piece:
             if is_ranged:
 
                 # this vector is used to calculate ranged moves
+                if valid_move is None:
+                    continue
                 direction_vector = subtract_vectors(valid_move, self.pos)
 
                 for multiplier in range(1, BOARD_SIZE):
@@ -45,7 +51,7 @@ class Piece:
             all_possible_moves.extend(possible_moves)
 
         # set function remove duplicates
-        return set(all_possible_moves)
+        return list(set(all_possible_moves))
 
     def calculate_next_valid_move(self, move: tuple) -> tuple:
         next_pos = add_vectors(self.pos, move)

@@ -5,16 +5,18 @@ from utils.utils import *
 
 @dataclass
 class Square:
-    _pos: tuple
-    _color: int = None
+    pos: tuple
+    color: int = None
     current_piece: Piece = None
 
     def __post_init__(self):
-        self._color = self._define_color()
+        self.color = self._define_color()
+        if isinstance(self.current_piece, str):
+            self.current_piece = Piece(self.current_piece, self.pos, 1)
 
     def _define_color(self):
-        rank = self._pos[0]
-        file = self._pos[1]
+        rank = self.pos[0]
+        file = self.pos[1]
 
         if is_even(rank):
             if is_even(file):
@@ -30,5 +32,5 @@ class Square:
 
     @property
     def is_occupied(self) -> bool:
-        return True if self.current_piece is None else False
+        return True if self.current_piece is not None else False
 
