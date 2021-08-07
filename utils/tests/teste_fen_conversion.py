@@ -15,42 +15,42 @@ class TestFenConversion(unittest.TestCase):
                 "current_piece": "r"
             },
             {
-                "pos": (0, 1),
+                "pos": (1, 0),
                 "color": 1,
                 "current_piece": "n"
             },
             {
-                "pos": (0, 2),
+                "pos": (2, 0),
                 "color": 1,
                 "current_piece": "b"
             },
             {
-                "pos": (0, 3),
+                "pos": (3, 0),
                 "color": 1,
                 "current_piece": "q"
             },
             {
-                "pos": (0, 4),
+                "pos": (4, 0),
                 "color": 1,
                 "current_piece": "k"
             },
             {
-                "pos": (0, 5),
+                "pos": (5, 0),
                 "color": 1,
                 "current_piece": "b"
             },
             {
-                "pos": (0, 6),
+                "pos": (6, 0),
                 "color": 1,
                 "current_piece": "n"
             },
             {
-                "pos": (0, 7),
+                "pos": (7, 0),
                 "color": 1,
                 "current_piece": "r"
             },
             {
-                "pos": (1, 0),
+                "pos": (0, 1),
                 "color": 1,
                 "current_piece": "p"
             },
@@ -60,42 +60,42 @@ class TestFenConversion(unittest.TestCase):
                 "current_piece": "p"
             },
             {
-                "pos": (1, 2),
+                "pos": (2, 1),
                 "color": 1,
                 "current_piece": "p"
             },
             {
-                "pos": (1, 3),
+                "pos": (3, 1),
                 "color": 1,
                 "current_piece": "p"
             },
             {
-                "pos": (1, 4),
+                "pos": (4, 1),
                 "color": 1,
                 "current_piece": "p"
             },
             {
-                "pos": (1, 5),
+                "pos": (5, 1),
                 "color": 1,
                 "current_piece": "p"
             },
             {
-                "pos": (1, 6),
+                "pos": (6, 1),
                 "color": 1,
                 "current_piece": "p"
             },
             {
-                "pos": (1, 7),
+                "pos": (7, 1),
                 "color": 1,
                 "current_piece": "p"
             },
             {
-                "pos": (2, 0),
+                "pos": (0, 2),
                 "color": None,
                 "current_piece": None
             },
             {
-                "pos": (2, 1),
+                "pos": (1, 2),
                 "color": None,
                 "current_piece": None
             },
@@ -105,77 +105,7 @@ class TestFenConversion(unittest.TestCase):
                 "current_piece": None
             },
             {
-                "pos": (2, 3),
-                "color": None,
-                "current_piece": None
-            },
-            {
-                "pos": (2, 4),
-                "color": None,
-                "current_piece": None
-            },
-            {
-                "pos": (2, 5),
-                "color": None,
-                "current_piece": None
-            },
-            {
-                "pos": (2, 6),
-                "color": None,
-                "current_piece": None
-            },
-            {
-                "pos": (2, 7),
-                "color": None,
-                "current_piece": None
-            },
-            {
-                "pos": (3, 0),
-                "color": None,
-                "current_piece": None
-            },
-            {
-                "pos": (3, 1),
-                "color": None,
-                "current_piece": None
-            },
-            {
                 "pos": (3, 2),
-                "color": None,
-                "current_piece": None
-            },
-            {
-                "pos": (3, 3),
-                "color": None,
-                "current_piece": None
-            },
-            {
-                "pos": (3, 4),
-                "color": None,
-                "current_piece": None
-            },
-            {
-                "pos": (3, 5),
-                "color": None,
-                "current_piece": None
-            },
-            {
-                "pos": (3, 6),
-                "color": None,
-                "current_piece": None
-            },
-            {
-                "pos": (3, 7),
-                "color": None,
-                "current_piece": None
-            },
-            {
-                "pos": (4, 0),
-                "color": None,
-                "current_piece": None
-            },
-            {
-                "pos": (4, 1),
                 "color": None,
                 "current_piece": None
             },
@@ -185,42 +115,42 @@ class TestFenConversion(unittest.TestCase):
                 "current_piece": None
             },
             {
-                "pos": (4, 3),
-                "color": None,
-                "current_piece": None
-            },
-            {
-                "pos": (4, 4),
-                "color": 0,
-                "current_piece": "P"
-            },
-            {
-                "pos": (4, 5),
-                "color": None,
-                "current_piece": None
-            },
-            {
-                "pos": (4, 6),
-                "color": None,
-                "current_piece": None
-            },
-            {
-                "pos": (4, 7),
-                "color": None,
-                "current_piece": None
-            },
-            {
-                "pos": (5, 0),
-                "color": None,
-                "current_piece": None
-            },
-            {
-                "pos": (5, 1),
-                "color": None,
-                "current_piece": None
-            },
-            {
                 "pos": (5, 2),
+                "color": None,
+                "current_piece": None
+            },
+            {
+                "pos": (6, 2),
+                "color": None,
+                "current_piece": None
+            },
+            {
+                "pos": (7, 2),
+                "color": None,
+                "current_piece": None
+            },
+            {
+                "pos": (0, 3),
+                "color": None,
+                "current_piece": None
+            },
+            {
+                "pos": (1, 3),
+                "color": None,
+                "current_piece": None
+            },
+            {
+                "pos": (2, 3),
+                "color": None,
+                "current_piece": None
+            },
+            {
+                "pos": (3, 3),
+                "color": None,
+                "current_piece": None
+            },
+            {
+                "pos": (4, 3),
                 "color": None,
                 "current_piece": None
             },
@@ -230,7 +160,77 @@ class TestFenConversion(unittest.TestCase):
                 "current_piece": None
             },
             {
+                "pos": (6, 3),
+                "color": None,
+                "current_piece": None
+            },
+            {
+                "pos": (7, 3),
+                "color": None,
+                "current_piece": None
+            },
+            {
+                "pos": (0, 4),
+                "color": None,
+                "current_piece": None
+            },
+            {
+                "pos": (1, 4),
+                "color": None,
+                "current_piece": None
+            },
+            {
+                "pos": (2, 4),
+                "color": None,
+                "current_piece": None
+            },
+            {
+                "pos": (3, 4),
+                "color": None,
+                "current_piece": None
+            },
+            {
+                "pos": (4, 4),
+                "color": 0,
+                "current_piece": "P"
+            },
+            {
                 "pos": (5, 4),
+                "color": None,
+                "current_piece": None
+            },
+            {
+                "pos": (6, 4),
+                "color": None,
+                "current_piece": None
+            },
+            {
+                "pos": (7, 4),
+                "color": None,
+                "current_piece": None
+            },
+            {
+                "pos": (0, 5),
+                "color": None,
+                "current_piece": None
+            },
+            {
+                "pos": (1, 5),
+                "color": None,
+                "current_piece": None
+            },
+            {
+                "pos": (2, 5),
+                "color": None,
+                "current_piece": None
+            },
+            {
+                "pos": (3, 5),
+                "color": None,
+                "current_piece": None
+            },
+            {
+                "pos": (4, 5),
                 "color": None,
                 "current_piece": None
             },
@@ -240,42 +240,42 @@ class TestFenConversion(unittest.TestCase):
                 "current_piece": None
             },
             {
-                "pos": (5, 6),
-                "color": None,
-                "current_piece": None
-            },
-            {
-                "pos": (5, 7),
-                "color": None,
-                "current_piece": None
-            },
-            {
-                "pos": (6, 0),
-                "color": 0,
-                "current_piece": "P"
-            },
-            {
-                "pos": (6, 1),
-                "color": 0,
-                "current_piece": "P"
-            },
-            {
-                "pos": (6, 2),
-                "color": 0,
-                "current_piece": "P"
-            },
-            {
-                "pos": (6, 3),
-                "color": 0,
-                "current_piece": "P"
-            },
-            {
-                "pos": (6, 4),
-                "color": None,
-                "current_piece": None
-            },
-            {
                 "pos": (6, 5),
+                "color": None,
+                "current_piece": None
+            },
+            {
+                "pos": (7, 5),
+                "color": None,
+                "current_piece": None
+            },
+            {
+                "pos": (0, 6),
+                "color": 0,
+                "current_piece": "P"
+            },
+            {
+                "pos": (1, 6),
+                "color": 0,
+                "current_piece": "P"
+            },
+            {
+                "pos": (2, 6),
+                "color": 0,
+                "current_piece": "P"
+            },
+            {
+                "pos": (3, 6),
+                "color": 0,
+                "current_piece": "P"
+            },
+            {
+                "pos": (4, 6),
+                "color": None,
+                "current_piece": None
+            },
+            {
+                "pos": (5, 6),
                 "color": 0,
                 "current_piece": "P"
             },
@@ -285,42 +285,42 @@ class TestFenConversion(unittest.TestCase):
                 "current_piece": "P"
             },
             {
-                "pos": (6, 7),
+                "pos": (7, 6),
                 "color": 0,
                 "current_piece": "P"
             },
             {
-                "pos": (7, 0),
+                "pos": (0, 7),
                 "color": 0,
                 "current_piece": "R"
             },
             {
-                "pos": (7, 1),
+                "pos": (1, 7),
                 "color": 0,
                 "current_piece": "N"
             },
             {
-                "pos": (7, 2),
+                "pos": (2, 7),
                 "color": 0,
                 "current_piece": "B"
             },
             {
-                "pos": (7, 3),
+                "pos": (3, 7),
                 "color": 0,
                 "current_piece": "Q"
             },
             {
-                "pos": (7, 4),
+                "pos": (4, 7),
                 "color": 0,
                 "current_piece": "K"
             },
             {
-                "pos": (7, 5),
+                "pos": (5, 7),
                 "color": 0,
                 "current_piece": "B"
             },
             {
-                "pos": (7, 6),
+                "pos": (6, 7),
                 "color": 0,
                 "current_piece": "N"
             },
@@ -352,42 +352,42 @@ class TestFenConversion(unittest.TestCase):
                 "current_piece": "r"
             },
             {
-                "pos": (0, 1),
+                "pos": (1, 0),
                 "color": 1,
                 "current_piece": "n"
             },
             {
-                "pos": (0, 2),
+                "pos": (2, 0),
                 "color": 1,
                 "current_piece": "b"
             },
             {
-                "pos": (0, 3),
+                "pos": (3, 0),
                 "color": 1,
                 "current_piece": "q"
             },
             {
-                "pos": (0, 4),
+                "pos": (4, 0),
                 "color": 1,
                 "current_piece": "k"
             },
             {
-                "pos": (0, 5),
+                "pos": (5, 0),
                 "color": 1,
                 "current_piece": "b"
             },
             {
-                "pos": (0, 6),
+                "pos": (6, 0),
                 "color": 1,
                 "current_piece": "n"
             },
             {
-                "pos": (0, 7),
+                "pos": (7, 0),
                 "color": 1,
                 "current_piece": "r"
             },
             {
-                "pos": (1, 0),
+                "pos": (0, 1),
                 "color": 1,
                 "current_piece": "p"
             },
@@ -397,42 +397,42 @@ class TestFenConversion(unittest.TestCase):
                 "current_piece": "p"
             },
             {
-                "pos": (1, 2),
+                "pos": (2, 1),
                 "color": 1,
                 "current_piece": "p"
             },
             {
-                "pos": (1, 3),
+                "pos": (3, 1),
                 "color": 1,
                 "current_piece": "p"
             },
             {
-                "pos": (1, 4),
+                "pos": (4, 1),
                 "color": 1,
                 "current_piece": "p"
             },
             {
-                "pos": (1, 5),
+                "pos": (5, 1),
                 "color": 1,
                 "current_piece": "p"
             },
             {
-                "pos": (1, 6),
+                "pos": (6, 1),
                 "color": 1,
                 "current_piece": "p"
             },
             {
-                "pos": (1, 7),
+                "pos": (7, 1),
                 "color": 1,
                 "current_piece": "p"
             },
             {
-                "pos": (2, 0),
+                "pos": (0, 2),
                 "color": None,
                 "current_piece": None
             },
             {
-                "pos": (2, 1),
+                "pos": (1, 2),
                 "color": None,
                 "current_piece": None
             },
@@ -442,77 +442,7 @@ class TestFenConversion(unittest.TestCase):
                 "current_piece": None
             },
             {
-                "pos": (2, 3),
-                "color": None,
-                "current_piece": None
-            },
-            {
-                "pos": (2, 4),
-                "color": None,
-                "current_piece": None
-            },
-            {
-                "pos": (2, 5),
-                "color": None,
-                "current_piece": None
-            },
-            {
-                "pos": (2, 6),
-                "color": None,
-                "current_piece": None
-            },
-            {
-                "pos": (2, 7),
-                "color": None,
-                "current_piece": None
-            },
-            {
-                "pos": (3, 0),
-                "color": None,
-                "current_piece": None
-            },
-            {
-                "pos": (3, 1),
-                "color": None,
-                "current_piece": None
-            },
-            {
                 "pos": (3, 2),
-                "color": None,
-                "current_piece": None
-            },
-            {
-                "pos": (3, 3),
-                "color": None,
-                "current_piece": None
-            },
-            {
-                "pos": (3, 4),
-                "color": None,
-                "current_piece": None
-            },
-            {
-                "pos": (3, 5),
-                "color": None,
-                "current_piece": None
-            },
-            {
-                "pos": (3, 6),
-                "color": None,
-                "current_piece": None
-            },
-            {
-                "pos": (3, 7),
-                "color": None,
-                "current_piece": None
-            },
-            {
-                "pos": (4, 0),
-                "color": None,
-                "current_piece": None
-            },
-            {
-                "pos": (4, 1),
                 "color": None,
                 "current_piece": None
             },
@@ -522,42 +452,42 @@ class TestFenConversion(unittest.TestCase):
                 "current_piece": None
             },
             {
-                "pos": (4, 3),
-                "color": None,
-                "current_piece": None
-            },
-            {
-                "pos": (4, 4),
-                "color": 0,
-                "current_piece": "P"
-            },
-            {
-                "pos": (4, 5),
-                "color": None,
-                "current_piece": None
-            },
-            {
-                "pos": (4, 6),
-                "color": None,
-                "current_piece": None
-            },
-            {
-                "pos": (4, 7),
-                "color": None,
-                "current_piece": None
-            },
-            {
-                "pos": (5, 0),
-                "color": None,
-                "current_piece": None
-            },
-            {
-                "pos": (5, 1),
-                "color": None,
-                "current_piece": None
-            },
-            {
                 "pos": (5, 2),
+                "color": None,
+                "current_piece": None
+            },
+            {
+                "pos": (6, 2),
+                "color": None,
+                "current_piece": None
+            },
+            {
+                "pos": (7, 2),
+                "color": None,
+                "current_piece": None
+            },
+            {
+                "pos": (0, 3),
+                "color": None,
+                "current_piece": None
+            },
+            {
+                "pos": (1, 3),
+                "color": None,
+                "current_piece": None
+            },
+            {
+                "pos": (2, 3),
+                "color": None,
+                "current_piece": None
+            },
+            {
+                "pos": (3, 3),
+                "color": None,
+                "current_piece": None
+            },
+            {
+                "pos": (4, 3),
                 "color": None,
                 "current_piece": None
             },
@@ -567,7 +497,77 @@ class TestFenConversion(unittest.TestCase):
                 "current_piece": None
             },
             {
+                "pos": (6, 3),
+                "color": None,
+                "current_piece": None
+            },
+            {
+                "pos": (7, 3),
+                "color": None,
+                "current_piece": None
+            },
+            {
+                "pos": (0, 4),
+                "color": None,
+                "current_piece": None
+            },
+            {
+                "pos": (1, 4),
+                "color": None,
+                "current_piece": None
+            },
+            {
+                "pos": (2, 4),
+                "color": None,
+                "current_piece": None
+            },
+            {
+                "pos": (3, 4),
+                "color": None,
+                "current_piece": None
+            },
+            {
+                "pos": (4, 4),
+                "color": 0,
+                "current_piece": "P"
+            },
+            {
                 "pos": (5, 4),
+                "color": None,
+                "current_piece": None
+            },
+            {
+                "pos": (6, 4),
+                "color": None,
+                "current_piece": None
+            },
+            {
+                "pos": (7, 4),
+                "color": None,
+                "current_piece": None
+            },
+            {
+                "pos": (0, 5),
+                "color": None,
+                "current_piece": None
+            },
+            {
+                "pos": (1, 5),
+                "color": None,
+                "current_piece": None
+            },
+            {
+                "pos": (2, 5),
+                "color": None,
+                "current_piece": None
+            },
+            {
+                "pos": (3, 5),
+                "color": None,
+                "current_piece": None
+            },
+            {
+                "pos": (4, 5),
                 "color": None,
                 "current_piece": None
             },
@@ -577,42 +577,42 @@ class TestFenConversion(unittest.TestCase):
                 "current_piece": None
             },
             {
-                "pos": (5, 6),
-                "color": None,
-                "current_piece": None
-            },
-            {
-                "pos": (5, 7),
-                "color": None,
-                "current_piece": None
-            },
-            {
-                "pos": (6, 0),
-                "color": 0,
-                "current_piece": "P"
-            },
-            {
-                "pos": (6, 1),
-                "color": 0,
-                "current_piece": "P"
-            },
-            {
-                "pos": (6, 2),
-                "color": 0,
-                "current_piece": "P"
-            },
-            {
-                "pos": (6, 3),
-                "color": 0,
-                "current_piece": "P"
-            },
-            {
-                "pos": (6, 4),
-                "color": None,
-                "current_piece": None
-            },
-            {
                 "pos": (6, 5),
+                "color": None,
+                "current_piece": None
+            },
+            {
+                "pos": (7, 5),
+                "color": None,
+                "current_piece": None
+            },
+            {
+                "pos": (0, 6),
+                "color": 0,
+                "current_piece": "P"
+            },
+            {
+                "pos": (1, 6),
+                "color": 0,
+                "current_piece": "P"
+            },
+            {
+                "pos": (2, 6),
+                "color": 0,
+                "current_piece": "P"
+            },
+            {
+                "pos": (3, 6),
+                "color": 0,
+                "current_piece": "P"
+            },
+            {
+                "pos": (4, 6),
+                "color": None,
+                "current_piece": None
+            },
+            {
+                "pos": (5, 6),
                 "color": 0,
                 "current_piece": "P"
             },
@@ -622,42 +622,42 @@ class TestFenConversion(unittest.TestCase):
                 "current_piece": "P"
             },
             {
-                "pos": (6, 7),
+                "pos": (7, 6),
                 "color": 0,
                 "current_piece": "P"
             },
             {
-                "pos": (7, 0),
+                "pos": (0, 7),
                 "color": 0,
                 "current_piece": "R"
             },
             {
-                "pos": (7, 1),
+                "pos": (1, 7),
                 "color": 0,
                 "current_piece": "N"
             },
             {
-                "pos": (7, 2),
+                "pos": (2, 7),
                 "color": 0,
                 "current_piece": "B"
             },
             {
-                "pos": (7, 3),
+                "pos": (3, 7),
                 "color": 0,
                 "current_piece": "Q"
             },
             {
-                "pos": (7, 4),
+                "pos": (4, 7),
                 "color": 0,
                 "current_piece": "K"
             },
             {
-                "pos": (7, 5),
+                "pos": (5, 7),
                 "color": 0,
                 "current_piece": "B"
             },
             {
-                "pos": (7, 6),
+                "pos": (6, 7),
                 "color": 0,
                 "current_piece": "N"
             },
