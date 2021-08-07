@@ -1,6 +1,7 @@
 from objects.square import Square
 from objects.board import Board
 from utils.utils import *
+import pygame
 
 
 class Game:
@@ -41,6 +42,22 @@ class Game:
             pass
         return board_string[:-2]
 
-    @property
-    def display(self):
-        return None
+    def display_board(self, surface: pygame.Surface):
+        for square in self.board.grid:
+            self.display_square(surface, square)
+            self.display_piece(surface, square)
+
+    def display_piece(self, surface: pygame.Surface, square: Square):
+        if square.current_piece is not None:
+            piece_image_name = IMAGE_MAP.get(square.current_piece.name)
+            image_path = "/home/tessitore/PyChess/images/Sprites/" + piece_image_name
+            image = pygame.image.load(image_path)
+            scaled_image = pygame.transform.scale(image, (SQUARE_PIXEL_SIZE, SQUARE_PIXEL_SIZE))
+
+            image_rect = pygame.Rect(*position_to_rect_cords(square.pos))
+
+            surface.blit(scaled_image, image_rect)
+
+    def display_square(self, surface: pygame.Surface, square: Square):
+        square_rect = pygame.Rect(*position_to_rect_cords(square.pos))
+        pygame.draw.rect(surface, square.get_rect_color, square_rect)

@@ -95,6 +95,12 @@ def squares_to_fen(squares: [dict]) -> str:
     return fen[1:]
 
 
+def position_to_rect_cords(pos: tuple) -> list:
+    height_width = (SQUARE_PIXEL_SIZE, SQUARE_PIXEL_SIZE)
+    x_y = multiply_vectors(pos, height_width)
+    return [*x_y, *height_width]
+
+
 # Vector operations
 def dict_to_tuple(dct: dict) -> tuple:
     return tuple(dct.values())

@@ -39,3 +39,7 @@ class Square:
     def is_occupied(self) -> bool:
         return True if self.current_piece is not None else False
 
+    @property
+    def get_rect_color(self):
+        return WHITE_SQUARE_COLOR if self.color == WHITE else BLACK_SQUARE_COLOR
+
